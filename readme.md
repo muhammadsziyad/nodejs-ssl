@@ -1,6 +1,25 @@
 To create a Node.js project with SSL (HTTPS), you'll need to generate or obtain SSL certificates and configure your Node.js application to use them. 
 Here's a step-by-step guide:
 
+```mermaid
+graph TD
+    A[User] -->|Sends HTTPS Request| B[Web Server]
+    B -->|Forwards Request| C[Node.js Application]
+    B -->|Handles SSL/TLS| D[SSL/TLS Certificates]
+    
+    subgraph Web Server
+        B
+        D
+    end
+
+    subgraph Application
+        C
+    end
+
+    style Web Server fill:#f9f,stroke:#333,stroke-width:2px
+    style Application fill:#ccf,stroke:#333,stroke-width:2px
+```
+
 Step 1: Install Node.js
 Make sure Node.js is installed on your machine. If not, download and install it from Node.js official website.
 
